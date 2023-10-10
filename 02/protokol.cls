@@ -142,7 +142,7 @@
 				\par\hposuna\fbox{\parbox[b][1,2cm][t]{14cm}{%
 						\raggedright{\footnotesize{Název zadání}}\par\centering{\Large{\textbf{\@nazev}}}}}%
 				\hposunc\fbox{\parbox[b][1,2cm][t]{1,675cm}{%
-						\centering{\footnotesize{Č. zadání}}\par\centering{\large{\textbf{\@cislo}}}}}\par%
+						\centering{\footnotesize{Č. úlohy}}\par\centering{\large{\textbf{\@cislo}}}}}\par%
 		}}%
 	\end{center}%
 \setlength{\parskip}{5pt}
