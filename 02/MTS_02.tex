@@ -55,9 +55,9 @@
 
 
 %citace 
-% \usepackage[backend=biber, style=iso-numeric, sortlocale=cs_CZ, autolang=other, language=czech]{biblatex}
-% \addbibresource{bibliography.bib}
-% \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+\usepackage[backend=biber, style=iso-numeric, sortlocale=cs_CZ, autolang=other, language=czech]{biblatex}
+\addbibresource{bibliography.bib}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
 % hyperlinky
 \usepackage[colorlinks]{hyperref}
 
@@ -116,46 +116,28 @@
 	\maketitle
 
 \section{Teoretický úvod}
-  Při použití tlustovrstvé technologie je potřeba uvědomit si faktory, které ovlivňují výslednou kvalitu a spolehlivost. Těchto faktorů je mnoho a odvíjí se zejména od použité technologie. 
-  Např. při sítotisku musíme vzít v potaz parametry zvolené pasty, substrátu, na který nanášíme, a v neposlední řadě také samotného síta. Optimálního výsledku dosáhneme pouze vhodnou kombinací všech zmíněných faktorů. 
+  \input{tex/uvod.tex}
 
-  Dnešní práce se věnuje vlastnotem používaných past. 
+\section{Praktická část}
+\subsection{Test hodnoty vytvořených rezistorů}
+  \input{tex/rezistory.tex}
+  \clearpage
+\subsection{Test hodnoty kapacity vytvořených kondenzátorů}
+  \input{tex/kondenzatory.tex}
+  \clearpage
+\subsection{Určení velikosti částic v pastě}
+  \input{tex/grindometr.tex}
+  \clearpage
+\subsection{Test vazby vrstvy na substrát}
+  \input{tex/scratchtest.tex}
+  \clearpage
+
+\section{Závěr}
+  \input{tex/zaver.tex}
   
-  \subsection{Reologické vlastnosti}
-  Reologie je nauka o tomu a plynutí materiálů. Pro obecný popis tekutosti materiálu můžeme využít tzv. Debořino číslo T:
-  \[
-    T=  \frac{T_{rel}}{T_{obs} }
-  \]
-  kde \(T_{rel} \) je relaxační doba daného materiálu a \(T_{obs} \) je doba pozorování.
-	
-  \subsubsection{Viskozita}
-    Viskozita popisuje vnitřní tření kapalin, to ovšem není konstantní, naopak je závislé na několika faktorech, např. na teplotě, složení a koncentraci roztoku a tlaku. 
-    Obvykle pracujeme s pojmem \textbf{Dynamická viskozita}, jedná se o fyzikální veličinu značenou \(\eta\), udává odpor, který kladou dvě sousední vrstvy kapaliny vzájemnému pohybu. 
-    Jednotkou viskozity je poise (P), ten je definován následovně:
-    \[
-      \qty{1}{P} = \qty{1}{\gram\per\centi\meter\per\second}
-    \]
-    \[  
-        \qty{10}{P} = \qty{1}{\pascal\second}
-    \]
-    Převrácenou hodnotou viskozity je \textbf{fluidita} neboli tekutost. 
 
-    \begin{figure}[h!]
-      \centering
-      \includegraphics[width=0.6\textwidth]{viskozita.png}
-      \caption{Časová závislost viskozity při nanášení pasty těrkou, mění se tedy tlak.}
-      \label{fig:viskozita-png}
-    \end{figure}
-    
-
-    \subsection{Zrnitost}
-      Pasta je obvykle tvořena pevným práškem žádaného materiálu, rozptýleným v pojivu. Při práci s pastou musíme vzít v potaz velikost zrn v prášku. Ta by měla být pokud možno co nejvíce definovaná, stejně tak i tvar zrn. 
-      Obvykle se pohybujeme v hodnotách od 1 do \qty{10}{\micro\meter}. Velikost zrn určuje mimo jiné také minimální tloušťku nátěru. 
-      
-      Určení velikosti zrn je možné za pomoci \textbf{grindometru}. Princip měření spočívá v rozetření pasty přes nakloněnou rovinu při konstantní výšce stěrky. V určitém bodě už zrna nevejdou do prostoru mezi rovinu a stěrku a jsou tedy setřeny pryč. Přístroj obsahuje stupnici, kde je možné následně odečíst požadovanou hodnotu velikosti zrn. 
-	
-% \section*{Reference}
-% \printbibliography[heading=none]
+\section*{Reference}
+\printbibliography[heading=none]
 
 % \clearpage
 

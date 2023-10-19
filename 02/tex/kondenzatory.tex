@@ -1,0 +1,65 @@
+V této části jsme měřili hodnoty kapacit kondenzátorů vytvořených za pomoci tlustovrstvé technologie, konkrétně s použitím dielekrické pasty ESL 4917. 
+Vyjdeme ze známého vztahu:
+\[
+    C=\varepsilon_{0}\cdot\varepsilon_{r}\cdot\frac{S}{d}
+\] 
+
+
+
+
+Katalogový list použité pasty \cite{pastaDatasheet} uvádí pro permitivitu a typickou tloušťku vrstvy vždy rozsah hodnot, viz Tab.~\ref{tab:pasta_hodnoty_katalog}. Pro teoretický výpočet kapacity použijeme tedy vždy okrajové hodnoty:
+\[
+    C_{teor MAX} = \varepsilon_{0}\cdot\varepsilon_{r MAX}\cdot\frac{S}{d_{MIN} }
+\]
+\[
+    C_{teor MIN} = \varepsilon_{0}\cdot\varepsilon_{r MIN}\cdot\frac{S}{d_{MAX} }
+\]
+
+\begin{table}[h!]
+    \caption{Výňatek z katalogového listu pasty ESL 4917.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l}
+        \(d_{MIN} \)            & \qty{35}{\micro\meter} \\ \hline
+        \(d_{MAX} \)            & \qty{50}{\micro\meter} \\ \hline
+        \(\varepsilon_{MIN} \)  & 8                      \\ \hline
+        \(\varepsilon_{MAX} \)  & 11                     \\ 
+        \end{tabular}
+    \label{tab:pasta_hodnoty_katalog}
+\end{table}
+
+Dále jsme pro každý kondenzátor vypočetli kapacitu na čtverec. Stejný postup byl opakován ve dvou variantách, nejprve pro kondenzátory s vrstvami vypálenými současně (viz Tab. \ref{tab:c_najednou_hodnoty}), poté pro kondenzátory s vrstvami vypalovanými postupně (viz Tab. \ref{tab:c_postupne_hodnoty}). 
+
+% C najednou
+\begin{table}[h!]
+    \caption{Teoretické a měřené hodnoty pro kondenzátory s výpalem najednou.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l||l|l}
+        S [sq] & \(C_{meas} \) [\unit{\pico\farad}] & \(C_{sq} \) [\unit{\pico\farad\per sq}]  & \(C_{teor MIN}\) [\unit{\pico\farad}] & \(C_{teor MAX}\) [\unit{\pico\farad}]\\ \hline
+        4      & 11,7   & 2,93  & 5,667     & 11,13    \\ \hline
+        25     & 53,4   & 2,14  & 35,42     & 69,57    \\ \hline
+        50     & 104,9  & 2,10  & 70,83     & 139,14   \\ \hline
+        100    & 203,0  & 2,03  & 141,67    & 278,27   \\ \hline
+        200    & 406,7  & 2,03  & 283,33    & 556,55   \\ 
+
+        \end{tabular}
+    \label{tab:c_najednou_hodnoty}
+\end{table}
+
+% C postupně
+\begin{table}[h!]
+    \caption{Teoretické a měřené hodnoty pro kondenzátory s výpalem postupně.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l||l|l}
+        S [sq] & \(C_{meas} \) [\unit{\pico\farad}] & \(C_{sq} \) [\unit{\pico\farad\per sq}]  & \(C_{teor MIN}\) [\unit{\pico\farad}] & \(C_{teor MAX}\) [\unit{\pico\farad}]\\ \hline
+        4       & 14,3  & 3,58  & 5,67       & 11,13   \\ \hline
+        25      & 67,5  & 2,70  & 35,42      & 69,57   \\ \hline
+        50      & 133,1 & 2,66  & 70,83      & 139,14  \\ \hline
+        100     & --    & --    & 141,67     & 278,27  \\ \hline
+        200     & 499,3 & 2,50  & 283,33     & 556,55  \\ 
+
+        \end{tabular}
+    \label{tab:c_postupne_hodnoty}
+\end{table}

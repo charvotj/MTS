@@ -1,0 +1,170 @@
+Měřili jsme hodnoty elektrického odporu pro různé vzorky tlustovrstvých rezistorů. V prvním kroku jsme měli k dispozici rezistory o aktivní ploše 3 čtverce ve čtyřech různých variantách -- bez a nebo s použitím krycí vrstvy; vypálené postupně, tedy po vrstvách, a nebo všechny vrstvy současně. V každé variantě jsme měřili 9 vzorků. Ve druhém kroku jsme pak měřili dvě shodné řady rezistorů s rostoucí aktivní plochou, jedna řada byla opatřena krycí vrstvou. 
+Přehled měřených variant se nachází v Tab.~\ref{tab:r_varianty}. 
+K měření byl použit digitální RLC metr (TODO).
+
+\begin{table}[h!]
+    \caption{Přehled jednotlivých měření odporu.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l|l|l|l|l}
+        Č. varianty  & R1       & R2       & R3       & R4       & R5       & R6       \\ \hline
+        Plocha [sq]  & 3        & 3        & 3        & 3        & různá    & různá    \\ \hline
+        Krycí vrstva & NE       & ANO      & NE       & ANO      & NE       & ANO      \\ \hline
+        Typ výpalu   & najednou & najednou & postupně & postupně & najednou & najednou \\ 
+        \end{tabular}
+    \label{tab:r_varianty}
+\end{table}
+
+Z naměřených hodnot jsme vždy stanovili hodnotu odporu na čtverec. Následně jsme vypočetli průměrnou hodnotu \(\overline{x} \), výběrovou směrodatnou odchylku \(s_{x} \) a variační koeficient \(VK\). Jelikož byla k tisku použita odporová pasta s hodnotou vrstvového odporu \qty{100}{\ohm\per sq} [zdrojem je studentův odhad, protože konkrétní typ použité pasty nám nebyl odhalen], můžeme naměřené hodnoty porovnat také s touto hodnotou, stanovili jsme tedy i relativní odchylku průměrné hodnoty od této teoretické \(\Delta_{r} \).
+Naměřené hodnoty a zmíněné statistické údaje pro jednotlivá měření se nacházejí v Tab.~\ref{tab:r1_hodnoty} -- \ref{tab:r6_hodnoty}.
+
+
+% R1
+\begin{table}[h!]
+    \caption{Série měření R1 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+                            & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+                            & 333,82 & 111,27 \\ \hline
+                            & 329,55 & 109,85 \\ \hline
+                            & 346,68 & 115,56 \\ \hline
+                            & 334,16 & 111,39 \\ \hline
+                            & 343,70 & 114,57 \\ \hline
+                            & 339,74 & 113,25 \\ \hline
+                            & 346,30 & 115,43 \\ \hline
+                            & 325,41 & 108,47 \\ \hline
+                            & 312,67 & 104,22 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]      & 300    & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]  & 334,67 & 111,56 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]    & 11,56\%& 11,56\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]         & 10,45  & 3,48   \\ \hline
+        VK [\unit{\percent}]                 & 3,12\% & 3,12\% \\ 
+    \end{tabular}
+    \label{tab:r1_hodnoty}
+\end{table}
+
+%R2
+\begin{table}[h!]
+    \caption{Série měření R2 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+                            & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+                            & 1217,6 & 405,87 \\ \hline
+                            & 1276,3 & 425,43 \\ \hline
+                            & 1321,6 & 440,53 \\ \hline
+                            & 1265,7 & 421,90 \\ \hline
+                            & 1328,6 & 442,87 \\ \hline
+                            & 1389,5 & 463,17 \\ \hline
+                            & 1451,6 & 483,87 \\ \hline
+                            & 1306,2 & 435,40 \\ \hline
+                            & 1061,1 & 353,70 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]      & 300    & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]  & 1290,91  & 430,30 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]    &  330,30\%& 330,30\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]         &  103,91  & 34,64   \\ \hline
+        VK [\unit{\percent}]                 &  8,05\% & 8,05\% \\ 
+    \end{tabular}
+    \label{tab:r2_hodnoty}
+\end{table}
+
+% R3
+\begin{table}[h!]
+    \caption{Série měření R3 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+                                                      & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+                                                      & 355,03 & 118,34 \\ \hline
+                                                      & 348,78 & 116,26 \\ \hline
+                                                      & 361,69 & 120,56 \\ \hline
+                                                      & 346,98 & 115,66 \\ \hline
+                                                      & 346,19 & 115,40 \\ \hline
+                                                      & 363,28 & 121,09 \\ \hline
+                                                      & 361,12 & 120,37 \\ \hline
+                                                      & 349,22 & 116,41 \\ \hline
+                                                      & 335,97 & 111,99 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]                   & 300    & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]               & 352,03 & 117,34 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]             & 17,34\%& 17,34\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]  & 8,48   & 2,83   \\ \hline
+        VK [\unit{\percent}]                          & 2,41\% & 2,41\% \\ 
+    \end{tabular}
+    \label{tab:r3_hodnoty}
+\end{table}
+
+% R4
+\begin{table}[h!]
+    \caption{Série měření R4 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+                                                      & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+                                                      & 363,15 & 121,05 \\ \hline
+                                                      & 350,85 & 116,95 \\ \hline
+                                                      & 388,36 & 129,45 \\ \hline
+                                                      & 364,01 & 121,34 \\ \hline
+                                                      & 375,37 & 125,12 \\ \hline
+                                                      & 375,08 & 125,03 \\ \hline
+                                                      & 368,63 & 122,88 \\ \hline
+                                                      & 382,58 & 127,53 \\ \hline
+                                                      & 380,45 & 126,82 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]                   & 300    & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]               & 372,05 & 124,02 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]             & 24,02\%& 24,02\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]  & 10,92   & 3,64   \\ \hline
+        VK [\unit{\percent}]                          & 2,93\% & 2,93\% \\ 
+    \end{tabular}
+    \label{tab:r4_hodnoty}
+\end{table}
+
+% R5
+\begin{table}[h!]
+    \caption{Série měření R5 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+        Akt. plocha [sq]                              & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+        1                                             & 68,56   & 68,56 \\ \hline
+        2                                             & 189,09  & 94,55 \\ \hline
+        3                                             & 307,82  & 102,61 \\ \hline
+        4                                             & 429,70  & 107,43 \\ \hline
+        5                                             & 558,80  & 111,76 \\ \hline
+        6                                             & 683,00  & 113,83 \\ \hline
+        7                                             & 805,40  & 115,06 \\ \hline
+        8                                             & 922,00  & 115,25 \\ \hline
+        9                                             & 1006,90 & 111,88 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]                   & --      & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]               & --      & 104,55 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]             & --      & 4,55\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]  & --      & 14,24   \\ \hline
+        VK [\unit{\percent}]                          & --      & 13,62\% \\ 
+    \end{tabular}
+    \label{tab:r5_hodnoty}
+\end{table}
+
+% R6
+\begin{table}[h!]
+    \caption{Série měření R6 -- Naměřené a zpracované hodnoty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+        Akt. plocha [sq]                              & R [\unit{\ohm}]    & \(R_{sq}\) [\unit{\ohm\per sq}]  \\ \hline\hline
+        1                                             & 102,83   & 102,83 \\ \hline
+        2                                             & 497,50   & 248,75 \\ \hline
+        3                                             & 944,80   & 314,93 \\ \hline
+        4                                             & 1428,10  & 357,03 \\ \hline
+        5                                             & 1936,60  & 387,32 \\ \hline
+        6                                             & 2443,30  & 407,22 \\ \hline
+        7                                             & 3089,40  & 441,34 \\ \hline
+        8                                             & 3551,40  & 443,93 \\ \hline
+        9                                             & 4095,00  & 455,00 \\ \hline\hline
+        \(x_{teor} \) [\unit{\ohm}]                   & --       & 100    \\ \hline
+        \(\overline{x} \) [\unit{\ohm}]               & --       & 350,93 \\ \hline
+        \(\Delta_{r} \) [\unit{\percent}]             & --       & 250,93\%\\ \hline\hline
+        \(s_{x} \) [\unit{\ohm}, \unit{\ohm\per sq}]  & --       & 108,26   \\ \hline
+        VK [\unit{\percent}]                          & --       & 30,85\% \\ 
+    \end{tabular}
+    \label{tab:r6_hodnoty}
+\end{table}
