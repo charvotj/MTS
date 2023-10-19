@@ -1,5 +1,5 @@
-V této části jsme měřili hodnoty kapacit kondenzátorů vytvořených za pomoci tlustovrstvé technologie, konkrétně s použitím dielekrické pasty ESL 4917. 
-Vyjdeme ze známého vztahu:
+V této části jsme měřili hodnoty kapacit kondenzátorů vytvořených za pomoci tlustovrstvé technologie, konkrétně s použitím dielekrické pasty ESL 4917. Měřeny byly opět LCR metrem (BK Precision 880)
+Abychom ověřili přesnost těchto kondenzátorů, je potřeba vypočítat teoretickou hodnotu kapacity, které by měl ideální kondenzátor dosáhnout. Vyjdeme ze známého vztahu:
 \[
     C=\varepsilon_{0}\cdot\varepsilon_{r}\cdot\frac{S}{d}
 \] 
@@ -30,6 +30,8 @@ Katalogový list použité pasty \cite{pastaDatasheet} uvádí pro permitivitu a
 
 Dále jsme pro každý kondenzátor vypočetli kapacitu na čtverec. Stejný postup byl opakován ve dvou variantách, nejprve pro kondenzátory s vrstvami vypálenými současně (viz Tab. \ref{tab:c_najednou_hodnoty}), poté pro kondenzátory s vrstvami vypalovanými postupně (viz Tab. \ref{tab:c_postupne_hodnoty}). 
 
+Naměřené a vypočtené hodnoty pro obě série měření se nacházejí v Tab.~\ref{tab:c_najednou_hodnoty} a \ref{tab:c_postupne_hodnoty}.
+
 % C najednou
 \begin{table}[h!]
     \caption{Teoretické a měřené hodnoty pro kondenzátory s výpalem najednou.}
@@ -42,13 +44,12 @@ Dále jsme pro každý kondenzátor vypočetli kapacitu na čtverec. Stejný pos
         50     & 104,9  & 2,10  & 70,83     & 139,14   \\ \hline
         100    & 203,0  & 2,03  & 141,67    & 278,27   \\ \hline
         200    & 406,7  & 2,03  & 283,33    & 556,55   \\ 
-
         \end{tabular}
     \label{tab:c_najednou_hodnoty}
 \end{table}
-
+\vspace{100pt}
 % C postupně
-\begin{table}[h!]
+\begin{table}[t!]
     \caption{Teoretické a měřené hodnoty pro kondenzátory s výpalem postupně.}
     \centering
     \def\arraystretch{1.4}
