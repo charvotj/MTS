@@ -1,8 +1,3 @@
-.~lock.Pozadavky_na_zpracovani_protokolu_MTS_2023.doc#
-Pozadavky_na_zpracovani_protokolu_MTS_2023.doc
-
-03/img/ignored/*
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -280,3 +275,8 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
+# Nothing special
+AD633.pdf
+zadani.jpg
+zadani.pdf
+*lock.*
