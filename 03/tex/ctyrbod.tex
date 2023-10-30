@@ -1,2 +1,42 @@
 Čtyřbodovou metodou jsme měřili substrát č. 4. K napájení soustavy byl použit laboratorní zdroj (MATRIX MPS-3005L-3) a nastavovali jsme proud \qty{1}{\milli\ampere}, který jsme měřili a kontrolovali za pomoci digitálního multimetru (KEYSIGHT 34465A). Pro některá měření rozsah zdroje nestačil pro vytvoření tohoto proudu, měřili jsme tedy s proudem menším. 
 Po nastavení proudu jsme měřili napětí druhým digitálním multimetrem (UNI-T UT804).
+
+Plošky 1A a 1B jsou ohraničené (s kontaktními ploškami), zbytek je pak neohraničený. Tomuto faktu je potřeba přizůsobit výpočet vrstvového odporu.
+
+Pro ohraničené vzorky vyjdeme ze vztahu:
+\[
+    R_{V} = \frac{U_{23}}{I_{14} K_{1}} [\unit{\ohm\per sq}]
+\]
+Pro neohraničené pak:
+\[
+    R_{V} = \frac{U_{23}}{I_{14}}C [\unit{\ohm\per sq}]
+\]
+
+Změřené a vypočtené hodnoty se nachází v Tab.~\ref{tab:ctyrbod_hodnoty}. 
+
+\begin{table}[h!]
+    \caption{Měřené a vypočtené hodnoty pro čtyřbodové měření.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l||l|l||l}
+        Č. plošky & \(K_{1} \) & \(C\) & \(I_{14} \)  [mA] & \(U_{23} \)  [V] & \(R_{V} \)  [\unit{\ohm\per sq}] \\
+        \hline \hline
+        1A & 0,44  & 2,270  &  1 & 6,447 & \num{14652,27} \\           \hline
+        1B & 0,44  & 2,270  &  1 & 6,430 & \num{14613,64} \\           \hline
+        2A & 0,285 & 3,500  &  0,962 & 4,778 & \num{17383,58} \\       \hline
+        2B & 1/3   & 3,000  &  0,818 & 5,661 & \num{20761,61} \\       \hline
+        2C & 0,7   & 1,425  &  0,532 & 7,459 & \num{19979,46} \\       \hline
+        2D & -     & -      &  0,200 & 7,6825 & - \\  
+    \end{tabular}
+    \label{tab:ctyrbod_hodnoty}
+\end{table}
+
+
+
+
+
+
+
+
+
+

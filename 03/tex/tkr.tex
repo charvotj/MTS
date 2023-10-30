@@ -1,0 +1,111 @@
+Měřili jsme teplotní závislost odporu dvou tlustovrstvých rezistorů v teplotním rozsahu 25 až \qty{140}{\degreeCelsius}. Odpor byl měřen dvojicí digitálních multimetrů (UNI-T UT805A) a teplota termočlánkem typu K. Naměřené hodnoty odporu širokého (\(R_{S} \)) a dlouhého (\(R_{D } \)) rezistoru se nachází v Tab.~\ref{tab:tkr_hodnoty}, zobrazeny jsou pak v grafu na Obr.~\ref{graf:tkr}, kde jsou také proloženy regresními přímkami. Rovnice vypočtených přímek jsou následující:
+\[
+    R_{S} = 2,13097-0,0000512435\cdot t
+\]
+\[
+    R_{D} = 0,0113403\cdot t +96,2776
+\]
+
+TKR pak můžeme z těchto rovnic vyčíst následovně:
+\[
+    TKR_{S} = \frac{-0,0000512435}{2,13097}\cdot 100 \doteq \qty{-2,404e-3}{\percent}
+\]
+
+\[
+    TKR_{D} = \frac{0,0113403}{96,2776}\cdot 100 \doteq \qty{1,178e-2}{\percent}
+\]
+
+Pro široký rezistor nám vyšel TKR negativní a naopak pro dlouhý rezistor vyšel TKR pozitivní.
+
+\begin{table}[h!]
+    \caption{Naměřené hodnoty odporů pro rostoucí teploty.}
+    \centering
+    \def\arraystretch{1.4}
+    \begin{tabular}{l|l|l}
+        \(t\)\ [\unit{\degreeCelsius}]  &   \(R_{S} \)\ [\unit{\kilo\ohm}]       &   \(R_{D} \)\ [\unit{\kilo\ohm}] \\
+        \hline \hline
+        25  &   2,1319  &   96,580   \\ \hline
+        30  &   2,1305  &   96,667   \\ \hline
+        35  &   2,1300  &   96,724   \\ \hline
+        40  &   2,1299  &   -    \\ \hline
+        45  &   2,1210  &   -    \\ \hline
+        50  &   2,1288  &   -    \\ \hline
+        55  &   2,1280  &   -    \\ \hline
+        60  &   2,1294  &   96,948   \\ \hline
+        65  &   2,1277  &   96,989   \\ \hline
+        70  &   2,1275  &   97,024   \\ \hline
+        75  &   2,1273  &   97,094   \\ \hline
+        80  &   2,1273  &   97,158   \\ \hline
+        85  &   2,1269  &   97,212   \\ \hline
+        90  &   2,1263  &   97,278   \\ \hline
+        95  &   2,1260  &   97,338   \\ \hline
+        100 &   2,1257  &   97,408   \\ \hline
+        105 &   2,1251  &   97,469   \\ \hline
+        110 &   2,1249  &   97,533   \\ \hline
+        115 &   2,1249  &   97,586   \\ \hline
+        120 &   2,1249  &   97,621   \\ \hline
+        125 &   2,1246  &   97,715   \\ \hline
+        130 &   2,1244  &   97,769   \\ \hline
+        135 &   2,1244  &   97,847   \\ \hline
+        140 &   2,1243  &   97,892   \\ 
+    \end{tabular}
+    \label{tab:tkr_hodnoty}
+\end{table}
+
+\begin{figure*}[h!]
+    \begin{tikzpicture}
+        \centering
+        \begin{axis}
+            [
+            xlabel={\( t\ [\unit{\degreeCelsius}]\)},
+            ylabel={\( R\ [\unit{\kilo\ohm}]\)},
+            axis y line*=left, % dve y osy
+            width=1\textwidth,
+            height = 0.5\textwidth,
+            % legend pos=north west
+            legend style={at={(0.03,0.5)},anchor=west}
+%			xmin=0,
+%			ymin=0,
+%			xmax=100
+%			ymax=100
+            ]
+
+            \addplot[mark=x, mark options={solid}, thick,  red, only marks, mark size=3pt] table [skip first n=0, x=tep, y=s, col sep=comma] {data/tkr.csv};
+            
+            \addlegendentry{Široký}
+
+            \addplot [domain=20:140, smooth, thin, dashed, red] { 2.13097-0.0000512435*x};
+            \addlegendentry{Regrese}
+            
+           
+        \end{axis}   
+     
+        \begin{axis}
+            [
+            ylabel={\( R\ [\unit{\kilo\ohm}]\)},
+            axis x line=none,
+            axis y line*=right,
+            width=1\textwidth,
+            height = 0.5\textwidth,
+            % legend pos=north east,
+            legend style={at={(1-0.03,0.5)},anchor=east}
+%			xmin=0,
+%			ymin=0,
+%			xmax=100
+%			ymax=100
+            ]
+
+            \addplot[mark=x, mark options={solid}, thick,  blue, only marks, mark size=3pt] table [skip first n=0, x=tep, y=d, col sep=comma] {data/tkr.csv};
+            
+            \addlegendentry{Dlouhý}
+            
+            \addplot [domain=20:140, smooth, thin, dashed, blue] { 0.0113403*x+96.2776};
+            \addlegendentry{Regrese}
+        
+    \end{axis}
+        
+    \end{tikzpicture}
+    \caption{Teplotní závislost dvou TLV rezistorů.}
+    \label{graf:tkr}
+\end{figure*}
+
