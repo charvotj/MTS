@@ -3,4 +3,23 @@ Jedná se o relativně přesnou metodu měření vrstvového odporu. Je možné 
 
 Jako měřící prostředek slouží čtveřice hrotů umístěných nejlépe v jedné linii. Mezi krajními hroty necháme protékat definovaný proud a mezi prostředními hroty pak měříme úbytek napětí, který tento proud vyvolá. 
 
-Pokud neměříme vzorky s nekonečnou plochou, je potřeba měření kompenzovat různými korekčními faktory. Zejména kompenzujeme geometrické rozměry a tvar vzorku, k tomu je možné využít např. van der Pauwovu metodu \cite{zadani,hrabovsky2012}. Pro časté tvary a rozměry vzorků pak můžeme vytvořit tatulku kompenzačních koeficientů. 
+Pokud neměříme vzorky s nekonečnou plochou, je potřeba měření kompenzovat různými korekčními faktory. Zejména kompenzujeme geometrické rozměry a tvar vzorku, k tomu je možné využít např. van der Pauwovu metodu \cite{zadani,hrabovsky2012}. Pro časté tvary a rozměry vzorků pak můžeme vytvořit tabulku kompenzačních koeficientů, stejně tomu bylo zřejmě i při přípravě této úlohy. 
+
+\subsection{Teplotní koeficient odporu (TKR)}
+Tento koeficient popisuje změnu odporu (potažmo rezistivity) materiálu v závislosti na změně teploty. Rozlišujeme pozitivní a negativní, při pozitivním TKR hodnota odporu s teplotou roste a naopak. 
+
+Výpočet odporu s uvážením TKR je následující:
+\[
+    R=R_{0} [1+TKR\cdot(T-T_{0} )]
+\]
+Po vyjádření \(TKR\) získáme:
+\[
+    TKR = \frac{R-R_{0} }{R_{0} \cdot (T-T_{0} )}
+\]
+Zobecněním tohoto vyjádření získáme:
+\[
+    TKR=\frac{1}{R}\cdot\frac{\mathrm{d}R}{\mathrm{d}T} 
+\]
+Tuto změnu rezistivity způsobují různé fyzikální faktory. S rostoucí teplotou se zvyšuje amtlituda tepelných kmitů částic, s čímž souvisí zhoršení průchodnodnosti pro elektrony a zvýšení odporu. Tento jev obvykle převládá u kovů a mají tedy obvykle pozitivní TKR. Naopak u polovodičů dochází s rostoucí teplotou ke zvýšené generaci nosičů náboje a tedy odpor naopak klesá, TKR je negativní \cite{zadani}. Složení materiálu je tedy zásadním parametrem. U TLV rezistorů můžeme TKR ovlivnit také dalšími parametry pasty, vliv má např. velikost zrn nebo vnitřní tření \cite{tcrArticle}.
+
+
