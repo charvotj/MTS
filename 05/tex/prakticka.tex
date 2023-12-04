@@ -1,66 +1,13 @@
-\subsection{Pracovní postup}
-    Nejprve bylo potřeba očistit keramický substrát od starých součástek a zbytků pájecí slitiny. Následně mohla být dispenzerem nanesena pájecí pasta a do ní za pomocí vakuové pipety usazeny nové rezistory. K této úloze byla použita pájecí slitina SAC 305. Na základě ověřeného pájecího profilu (viz \ref{profilek}) jsme osazený substrát podrobili procesu pájení přetavením ve stejné pájecí peci. Následně jsme za pomoci optického mikroskopu zhodnotili kvalitu pájených spojů, ukázka je vidět na Obr. \ref{fig:img-kvalita-jpg}.
+\subsection{Oprava DPS}
+    \subsubsection{Oprava vodivého motivu}
+        V případě poškozené pájecí plošky a nebo jiné části vodivého motivu je potřeba v prvním kroku danou plošku odebrat. K nahrazení se používá panel s náhradními ploškami, ze kterých je vybrána ploška odpovídající velikosti. V rozporu s návodem k úloze \cite{zadani} jsme nepoužili k připevnění nové plošky epoxidové lepidlo, ale UV světlem vytvrditelnou nepájivou masku. Z naší strany je v tuto metodu drobná pochybnost, neboť nám není jasné, jak dojde k vytvrzení masky pod pájecí ploškou, kam UV světlo neproniklo, ale zřejmě je i tato metoda funkční a o něco rychlejší, než použití dvousložkového epoxidu.
 
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.6\textwidth]{img/kvalita.jpg}
-        \caption{Posouzení kvality pájeného spoje.}
-        \label{fig:img-kvalita-jpg}
-    \end{figure}
-    
+        Po uchycení je potřeba plošku připájet, k tomu jsme využili mikropájku s hrotem. Po pájení je vhodné zkontrolovat multimetrem vodivost nově vytvořeného spoje, což v našem případě dopadlo bez problému. Poté následuje oprava nepájivé masky v místech, kde musela nýt odebrána, aby mohlo dojít ke spojení staré a nové vodivé cesty. Jak probíhá obnovení nepájivé masky je uvedeno v další sekci. 
 
-\subsection{Leaching}
-    U tří různých pájecích past jsme testovali možnost vzniku leachingu při pájení přetavením. K testu byl použit keramický substrát na kterém je vodivý motiv vytvořen tiskem tlustovrstvé stříbrné pasty. Na stejný substrát byl umísten vzorek každé z pájecích past, onkrétně se jednalo o pasty Sn63Pb37, Sn42Bi58 a SAC305. K dosažení leatchingu jsme si pomohli vyšší teplotou, než je optimální pro tyto pasty, tedy cca \qty{250}{\degreeCelsius}. Výsledek našeho pozorování je vidět na Obr. \ref{fig:img-leatching-jpg}
+    \subsubsection{Oprava nepájivé masky}
+        Oprava nepájivé masky je nutná obvykle při fyzickém poškození DPS, kdy dojde k porušení této vrstvy v místě vodivého motivu, což vede k nežádoucímu snížení elektrické pevnosti a zvýšenému riziku zkratu. Také je potřeba tuto opravu provést jako následující po jiné opravě, například výměně poškozené pájecí plošky, kdy je v rámci opravy nutné část původní nepájivé masky odebrat.  
 
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[width=0.6\textwidth]{img/leatching.jpg}
-        \caption{Ukázka jevu leatching pro různé pájecí pasty.}
-        \label{fig:img-leatching-jpg}
-    \end{figure}
-    
+        Pokud je cílem opraváře dosažení vizuálně pěkného výsledku, je vhodným krokem odtranění části nepájivé masky sousedící s poškozeným místem a vytvoření tak symetrického geometrického tvaru. Následně je možné také za pomocí lepicí pásky ohraničit tuto oblast (technika vypůjčena z oblasti malířství). Toto ale nebylo naším cílem, proto byl tento jinak velmi užitečný krok přeskočen.
 
-
-
-\subsection{Měření teplotního profilu} \label{profilek}
-    U konvekční přetavovací pece (Essemtec RO 300FC) jsme testovali nastavení pájcího profilu. Zkouška probíhala za pomocí testovacího substrátu osazeného termočlánky připojenými k měřícímu přípravku. Změřený pájecí profil se nachází na Obr. \ref{graf:profil}, můžeme na něm vidět průbeh měřené teploty z obou termočlánků a také ze sensorů zabudovaných napevno v jednotlivých zónách pece, které by měly reflektovat nastavené teploty.
-
-    \begin{figure*}[h!]
-        \begin{tikzpicture}
-            \centering
-            \begin{axis}
-                [
-                xlabel={\( t\ [\unit{\second}]\)},
-                ylabel={\( T\ [\unit{\degreeCelsius}]\)},
-                %axis y line*=left, % dve y osy
-                width=1\textwidth,
-                height = 0.5\textwidth,
-                legend pos=north west
-    %			xmin=0,
-    %			ymin=0,
-    %			xmax=100
-    %			ymax=100
-                ]
-    
-                \addplot[mark=none, mark options={solid}, thick,  red, solid, mark size=3pt] table [skip first n=0, x=Zone-1-X, y=Zone-1-Y, col sep=comma] {data/profil.csv};
-                \addlegendentry{Zone-1-}
-    
-                \addplot[mark=none, mark options={solid}, thick,  green, solid, mark size=3pt] table [skip first n=0, x=Zone-2-X, y=Zone-2-Y, col sep=comma] {data/profil.csv};
-                \addlegendentry{Zone-2-}
-    
-                \addplot[mark=none, mark options={solid}, thick,  yellow, solid, mark size=3pt] table [skip first n=0, x=Zone-3-X, y=Zone-3-Y, col sep=comma] {data/profil.csv};
-                \addlegendentry{Zone-3-}
-    
-                \addplot[mark=none, mark options={solid}, thick,  black, solid, mark size=3pt] table [skip first n=0, x=Sonda-1-X, y=Sonda-1-Y, col sep=comma] {data/profil.csv};
-                \addlegendentry{Sonda-1-}
-    
-                \addplot[mark=none, mark options={solid}, thick,  gray, solid, mark size=3pt] table [skip first n=0, x=Sonda-2-X, y=Sonda-2-Y, col sep=comma] {data/profil.csv};
-                \addlegendentry{Sonda-2-}
-                
-            \end{axis}   
+        Nezbytným dalším krokem je nanesení nové nepájivé masky, to bylo provedeno některým z nástrojů nacházejících se na pracovním stole, nejvhodnějším by byl ovšem bezpochyby štětec. Cílem bylo vytvoření co nejvíce homogenní a hladké vrstvy na vymezené opravované oblasti. 
         
-            
-        \end{tikzpicture}
-        \caption{Měřený teplotní profil.}
-        \label{graf:profil}
-    \end{figure*}
