@@ -2,7 +2,7 @@
 
 \documentclass{protokol}
 
-
+\usepackage{pdfpages}
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{arrows}
@@ -41,10 +41,10 @@
 \skupina{MET/2}
 \spolupracoval{--}
 
-\merenodne{28.11.\ 2023}
+\merenodne{5.12.\ 2023}
 \odevzdanodne{5.12.\ 2023}
-\nazev{Opravy desek plošných spojů}
-\cislo{5} %měřené úlohy
+\nazev{Měření a dostavování rezistorů}
+\cislo{6} %měřené úlohy
 
 \predmet{Mikroelektronika a technologie součástek}
 \ustav{Ústav mikroelektroniky}
@@ -126,5 +126,7 @@
 \clearpage
 \section*{Reference}
 \printbibliography[heading=none]
+
+\includepdf[pages=1]{data/data.pdf}
 
 \end{document}
